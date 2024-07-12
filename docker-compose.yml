@@ -1,0 +1,30 @@
+
+version: '3'
+services:
+  laravel-docker:
+    container_name: laravel-docker
+    build: 
+      context: .
+    volumes:
+      - ./laravel-app:/var/www/html
+      - ./apache-config/apache2.conf:/etc/apache2/apache2.conf
+      - ./apache-config/apache-config.conf:/etc/apache2/sites-available/000-default.conf
+    ports:
+      - 9000:80
+    networks:
+      - app-network
+
+  laravel-db:
+    container_name: laravel-db
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: hcrec
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+

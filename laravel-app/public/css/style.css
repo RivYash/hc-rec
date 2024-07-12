@@ -1,0 +1,33 @@
+.logo {
+    height: 10rem;
+    /* Maintain aspect ratio */
+    display: flex;
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    #mlogo-dark {
+        display: block;
+    }
+
+    #mlogo-light {
+        display: none;
+    }
+
+    input:focus {
+        border-color: #FFFFFF;
+        /* Change to white */
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    #mlogo-dark {
+        display: none;
+    }
+
+    #mlogo-light {
+        display: block;
+    }
+}
