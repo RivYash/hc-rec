@@ -1,8 +1,0 @@
-<<<<<<< HEAD
-nothingg!!
-=======
-
-=======
-ok push this
->>>>>>> parent of d59308f (last change)
->>>>>>> parent of d01216a (reverted)
