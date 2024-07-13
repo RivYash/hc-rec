@@ -14,15 +14,15 @@ services:
     networks:
       - app-network
 
-  laravel-db:
-    container_name: laravel-db
-    image: postgres:latest
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: hcrec
-    networks:
-      - app-network
+  # laravel-db:
+  #   container_name: laravel-db
+  #   image: postgres:latest
+  #   environment:
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: postgres
+  #     POSTGRES_DB: hcrec
+  #   networks:
+  #     - app-network
 
 networks:
   app-network:
